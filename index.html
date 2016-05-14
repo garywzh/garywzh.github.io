@@ -2,10 +2,8 @@
 
 
 
-  
 
-
-<html class="theme-next mist use-motion">
+<html class="theme-next mist">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -102,7 +100,7 @@
     scheme: 'Mist',
     sidebar: {"position":"left","display":"hide"},
     fancybox: true,
-    motion: true,
+    motion: false,
     duoshuo: {
       userId: 0,
       author: '博主'
@@ -233,8 +231,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/05/14/firstblog/" itemprop="url">
-                  firstblog
+                <a class="post-title-link" href="/2016/03/18/对Java中内部类的理解/" itemprop="url">
+                  对Java中内部类的理解
                 </a>
               
             
@@ -247,14 +245,21 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-14T14:00:19+08:00" content="2016-05-14">
-              2016-05-14
+            <time itemprop="dateCreated" datetime="2016-03-18T20:45:10+08:00" content="2016-03-18">
+              2016-03-18
             </time>
           </span>
 
           
 
           
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/18/对Java中内部类的理解/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/18/对Java中内部类的理解/" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
 
@@ -277,7 +282,25 @@
       
         
           
-            
+            <p>####为什么Java需要内部类？</p>
+<p>我们知道Java作为一门面向对象的编程语言有三大特征：封装、继承和多态。封装有以下好处：</p>
+<ol>
+<li>良好的封装能够减少耦合。</li>
+<li>类内部的结构可以自由修改。</li>
+<li>可以对成员进行更精确的控制。</li>
+<li>隐藏信息，实现细节。</li>
+</ol>
+<p>在开发过程中经常会出现这种情况，某一个类A只会在类B用到，这个时候两个类即便放在同一个包中，封装特性也没有很好，这个时候更好的处理办法就是把类A放在类B中。这里就体现了我们对内部类的需求。</p>
+<p>内部类有很多好处；</p>
+<ol>
+<li>它将只用在其他一个地方的类在逻辑上实现了更好的分组。</li>
+<li>提高了封装程度。</li>
+<li>提供更好的可读性和可维护性。</li>
+</ol>
+<p>####为什么内部类建议尽量使用static修饰（静态内部类）？</p>
+<p>在创建一个内部类的实例时，这个实例会持它外部类的引用，这使得在内部类里可以直接使用外部类的成员变量和方法。但是很多时候我们并不需要它，而持有的引用会导致外部类不能被GC回收，容易产生内存泄漏。如果加上static将他变成静态内部类时，在编译的时候内部类会被编译成一个独立常规的类，静态内部类的实例不会持有外部类的引用，这样就相当于就是一个普通的类，只是源码写在另一个类里而已。</p>
+<p>####匿名内部类<br>TODO</p>
+
           
         
       
@@ -326,8 +349,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/05/14/hello-world/" itemprop="url">
-                  Hello World
+                <a class="post-title-link" href="/2016/03/17/关于iptables的配置问题/" itemprop="url">
+                  关于iptables的配置问题
                 </a>
               
             
@@ -340,14 +363,21 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-14T13:45:23+08:00" content="2016-05-14">
-              2016-05-14
+            <time itemprop="dateCreated" datetime="2016-03-17T11:01:10+08:00" content="2016-03-17">
+              2016-03-17
             </time>
           </span>
 
           
 
           
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/17/关于iptables的配置问题/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/17/关于iptables的配置问题/" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
 
@@ -370,15 +400,124 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+            <p>我们一般通过给iptables配置一些rule以提升服务器的安全性。常见做法就是在入口上只打开需要的端口如80、443、22等等，命令如下：</p>
+<p><code>sudo iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT</code></p>
+<p>然后默认drop非法数据包：</p>
+<p><code>sudo iptables -P INPUT DROP</code></p>
+<p>但是一般服务器都需要联网功能，比如下载、更新文件（apt-get、git），转发数据（Shadow$ocks），这个时候服务器主动建立连接请求数据时返回的数据包会被drop。举例说明：</p>
+<p>前提：</p>
+<p>通过ss访问Google，服务器iptables打开了8888端口给ss</p>
+<p>流程：</p>
+<p>客户端与vps 8888端口建立连接并发送访问www.google.com的请求 - 成功</p>
+<p>vps请求与Google服务器建立连接 - 失败</p>
+<p>分析：</p>
+<p>ss接收到数据后会通过其他端口（如52333）与Google服务器建立连接，而这个端口（52333）并没有在iptables中配置 input accept，这就导致在vps与Google服务器建立连接开始的三次握手中Google服务器响应的ACK数据包会被iptables drop，导致连接建立失败，使得ss无法正常工作</p>
+<p>解决方法：</p>
+<p>我们需要让vps主动发起的连接请求所返回的响应通过iptables，命令如下：</p>
+<p><code>sudo iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT</code></p>
+<p>结束</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/03/14/出栈序列问题/" itemprop="url">
+                  出栈序列问题
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-03-14T14:00:19+08:00" content="2015-03-14">
+              2015-03-14
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/03/14/出栈序列问题/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/03/14/出栈序列问题/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>出栈序列问题可以按照下面的方法来判断的:</p>
+<p>对于出栈序列中的每一个数字，在它后面的、比它小的所有数字，一定是按递减顺序排列的。</p>
 
           
         
@@ -440,7 +579,7 @@
       <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
+               src="/uploads/avatar.jpg"
                alt="garywzh" />
           <p class="site-author-name" itemprop="name">garywzh</p>
           <p class="site-description motion-element" itemprop="description"></p>
@@ -448,7 +587,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -463,9 +602,53 @@
 
         <div class="links-of-author motion-element">
           
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/garywzh" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/garywzh" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/lengyuhanchen" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/gary_wzh" target="_blank" title="ZhiHu">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  ZhiHu
+                </a>
+              </span>
+            
+          
         </div>
 
         
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
         
 
         
@@ -581,6 +764,25 @@
 
 
 
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'garywzh';
+      var disqus_identifier = 'index.html';
+      var disqus_title = '';
+      var disqus_url = '';
+
+      function run_disqus_script(disqus_script){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+      
+    </script>
   
 
 
