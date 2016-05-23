@@ -166,8 +166,6 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
             首页
           </a>
         </li>
@@ -176,9 +174,15 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
             归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-daily_focus">
+          <a href="/daily_focus" rel="section">
+            
+            每日关注
           </a>
         </li>
       
@@ -186,9 +190,7 @@
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
+            关于我
           </a>
         </li>
       
@@ -299,7 +301,7 @@
 </ol>
 <p>####为什么内部类建议尽量使用static修饰（静态内部类）？</p>
 <p>在创建一个内部类的实例时，这个实例会持它外部类的引用，这使得在内部类里可以直接使用外部类的成员变量和方法。但是很多时候我们并不需要它，而持有的引用会导致外部类不能被GC回收，容易产生内存泄漏。如果加上static将他变成静态内部类时，在编译的时候内部类会被编译成一个独立常规的类，静态内部类的实例不会持有外部类的引用，这样就相当于就是一个普通的类，只是源码写在另一个类里而已。</p>
-<p>####匿名内部类<br>TODO</p>
+<p>结束</p>
 
           
         
@@ -350,7 +352,7 @@
               
                 
                 <a class="post-title-link" href="/2016/03/17/关于iptables的配置问题/" itemprop="url">
-                  关于iptables的配置问题
+                  关于iptables配置的问题
                 </a>
               
             
@@ -404,14 +406,14 @@
 <p><code>sudo iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT</code></p>
 <p>然后默认drop非法数据包：</p>
 <p><code>sudo iptables -P INPUT DROP</code></p>
-<p>但是一般服务器都需要联网功能，比如下载、更新文件（apt-get、git），转发数据（Shadow$ocks），这个时候服务器主动建立连接请求数据时返回的数据包会被drop。举例说明：</p>
+<p>但是一般服务器都需要联网功能，比如下载、更新文件（apt-get、git），转发数据（shadowsocks），这个时候服务器主动建立连接请求数据时返回的数据包会被drop。举例说明：</p>
 <p>前提：</p>
-<p>通过ss访问Google，服务器iptables打开了8888端口给ss</p>
+<p>通过shadowsocks访问Google，服务器iptables打开了8888端口给shadowsocks</p>
 <p>流程：</p>
 <p>客户端与vps 8888端口建立连接并发送访问www.google.com的请求 - 成功</p>
 <p>vps请求与Google服务器建立连接 - 失败</p>
 <p>分析：</p>
-<p>ss接收到数据后会通过其他端口（如52333）与Google服务器建立连接，而这个端口（52333）并没有在iptables中配置 input accept，这就导致在vps与Google服务器建立连接开始的三次握手中Google服务器响应的ACK数据包会被iptables drop，导致连接建立失败，使得ss无法正常工作</p>
+<p>shadowsocks接收到数据后会通过其他端口（如52333）与Google服务器建立连接，而这个端口（52333）并没有在iptables中配置 input accept，这就导致在vps与Google服务器建立连接开始的三次握手中Google服务器响应的ACK数据包会被iptables drop，导致连接建立失败，使得shadowsocks无法正常工作</p>
 <p>解决方法：</p>
 <p>我们需要让vps主动发起的连接请求所返回的响应通过iptables，命令如下：</p>
 <p><code>sudo iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT</code></p>

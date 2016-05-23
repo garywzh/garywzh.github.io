@@ -104,7 +104,7 @@
 隐藏信息，实现细节。
 
 在开发过程中经常会出现这种情况，某一个类A只会在类B用到，这个时候两个类即便放在同一个包中，封装特性也没有很好，这个时候更好的处理办法就是把类A放在类B中。这里就体">
-<meta property="og:updated_time" content="2016-05-14T08:53:30.537Z">
+<meta property="og:updated_time" content="2016-05-22T09:25:02.957Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="对Java中内部类的理解">
 <meta name="twitter:description" content="####为什么Java需要内部类？
@@ -189,8 +189,6 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
             首页
           </a>
         </li>
@@ -199,9 +197,15 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
             归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-daily_focus">
+          <a href="/daily_focus" rel="section">
+            
+            每日关注
           </a>
         </li>
       
@@ -209,9 +213,7 @@
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
+            关于我
           </a>
         </li>
       
@@ -317,7 +319,7 @@
 </ol>
 <p>####为什么内部类建议尽量使用static修饰（静态内部类）？</p>
 <p>在创建一个内部类的实例时，这个实例会持它外部类的引用，这使得在内部类里可以直接使用外部类的成员变量和方法。但是很多时候我们并不需要它，而持有的引用会导致外部类不能被GC回收，容易产生内存泄漏。如果加上static将他变成静态内部类时，在编译的时候内部类会被编译成一个独立常规的类，静态内部类的实例不会持有外部类的引用，这样就相当于就是一个普通的类，只是源码写在另一个类里而已。</p>
-<p>####匿名内部类<br>TODO</p>
+<p>结束</p>
 
       
     </div>
@@ -342,8 +344,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/17/关于iptables的配置问题/" rel="next" title="关于iptables的配置问题">
-                <i class="fa fa-chevron-left"></i> 关于iptables的配置问题
+              <a href="/2016/03/17/关于iptables的配置问题/" rel="next" title="关于iptables配置的问题">
+                <i class="fa fa-chevron-left"></i> 关于iptables配置的问题
               </a>
             
           </div>
