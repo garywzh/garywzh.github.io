@@ -82,15 +82,31 @@
 
 
 
-<meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="garywzh">
-<meta property="og:url" content="http://garywzh.xyz/index.html">
+<meta name="description" content="假设 class Dog extends Animal
+泛型集合违反直觉的行为因为Java有多态的特性，所以我们可以这样写:
+Animal animal = new Dog();
+在Java集合中类似的这样写就会提示错误
+List&amp;lt;Animal&amp;gt; list = new ArrayList&amp;lt;Dog&amp;gt;();
+A dog is a animal, but a list of do">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java的集合与泛型">
+<meta property="og:url" content="http://garywzh.xyz/2016/06/10/Java的集合与泛型/index.html">
 <meta property="og:site_name" content="garywzh">
-<meta property="og:description">
+<meta property="og:description" content="假设 class Dog extends Animal
+泛型集合违反直觉的行为因为Java有多态的特性，所以我们可以这样写:
+Animal animal = new Dog();
+在Java集合中类似的这样写就会提示错误
+List&amp;lt;Animal&amp;gt; list = new ArrayList&amp;lt;Dog&amp;gt;();
+A dog is a animal, but a list of do">
+<meta property="og:updated_time" content="2016-06-13T10:21:57.103Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="garywzh">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Java的集合与泛型">
+<meta name="twitter:description" content="假设 class Dog extends Animal
+泛型集合违反直觉的行为因为Java有多态的特性，所以我们可以这样写:
+Animal animal = new Dog();
+在Java集合中类似的这样写就会提示错误
+List&amp;lt;Animal&amp;gt; list = new ArrayList&amp;lt;Dog&amp;gt;();
+A dog is a animal, but a list of do">
 
 
 
@@ -108,7 +124,7 @@
   };
 </script>
 
-  <title> garywzh </title>
+  <title> Java的集合与泛型 | garywzh </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -129,9 +145,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -210,9 +224,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -232,10 +246,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/06/10/Java的集合与泛型/" itemprop="url">
-                  Java的集合与泛型
-                </a>
+                Java的集合与泛型
               
             
           </h1>
@@ -282,9 +293,7 @@
       
 
       
-        
-          
-            <p>假设 <code>class Dog extends Animal</code></p>
+        <p>假设 <code>class Dog extends Animal</code></p>
 <h3 id="泛型集合违反直觉的行为"><a href="#泛型集合违反直觉的行为" class="headerlink" title="泛型集合违反直觉的行为"></a>泛型集合违反直觉的行为</h3><p>因为Java有多态的特性，所以我们可以这样写:</p>
 <p><code>Animal animal = new Dog();</code></p>
 <p>在Java集合中类似的这样写就会提示错误</p>
@@ -305,16 +314,19 @@
 <p>泛型中使用通配符有 <a href="http://stackoverflow.com/a/1292147/5435312" target="_blank" rel="external">get-put principle</a>, 也就是如果使用了<code>&lt;? extends T&gt;</code>只能get不能put(可以put null),如果使用了<code>&lt;? super T&gt;</code>只能put不能get(只能get到 Object)</p>
 <p>java.util.Collections中的<code>copy</code>使用的就是最后一种写法,更符合 <a href="http://stackoverflow.com/a/2723538/5435312" target="_blank" rel="external">PECS</a>, 这在某种意义上限制了部分操作，减小了代码出错的几率</p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
@@ -322,454 +334,32 @@
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/05/30/部分常用开源库的默认配置参数/" rel="next" title="部分常用开源库的默认配置参数">
+                <i class="fa fa-chevron-left"></i> 部分常用开源库的默认配置参数
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2016/05/30/部分常用开源库的默认配置参数/" itemprop="url">
-                  部分常用开源库的默认配置参数
-                </a>
-              
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-30T15:10:19+08:00" content="2016-05-30">
-              2016-05-30
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/05/30/部分常用开源库的默认配置参数/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/05/30/部分常用开源库的默认配置参数/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h3 id="Glide"><a href="#Glide" class="headerlink" title="Glide"></a>Glide</h3><p>磁盘缓存: 存储在应用程序对应的内部缓存目录,最大 250MB</p>
-<p>Bitmap格式: RGB_565</p>
-<h3 id="OKHttp"><a href="#OKHttp" class="headerlink" title="OKHttp"></a>OKHttp</h3><p>异步请求并发数: 同一目标服务器 5 ; 总共 64</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/03/18/对Java中内部类的理解/" itemprop="url">
-                  对Java中内部类的理解
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-18T20:45:10+08:00" content="2016-03-18">
-              2016-03-18
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/03/18/对Java中内部类的理解/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/18/对Java中内部类的理解/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="为什么Java需要内部类？"><a href="#为什么Java需要内部类？" class="headerlink" title="为什么Java需要内部类？"></a>为什么Java需要内部类？</h3><p>我们知道Java作为一门面向对象的编程语言有三大特征：封装、继承和多态。封装有以下好处：</p>
-<ol>
-<li>良好的封装能够减少耦合。</li>
-<li>类内部的结构可以自由修改。</li>
-<li>可以对成员进行更精确的控制。</li>
-<li>隐藏信息，实现细节。</li>
-</ol>
-<p>在开发过程中经常会出现这种情况，某一个类A只会在类B用到，这个时候两个类即便放在同一个包中，封装特性也没有很好，这个时候更好的处理办法就是把类A放在类B中。这里就体现了我们对内部类的需求。</p>
-<p>内部类有很多好处；</p>
-<ol>
-<li>它将只用在其他一个地方的类在逻辑上实现了更好的分组。</li>
-<li>提高了封装程度。</li>
-<li>提供更好的可读性和可维护性。</li>
-</ol>
-<h3 id="为什么内部类建议尽量使用static修饰（静态内部类）？"><a href="#为什么内部类建议尽量使用static修饰（静态内部类）？" class="headerlink" title="为什么内部类建议尽量使用static修饰（静态内部类）？"></a>为什么内部类建议尽量使用static修饰（静态内部类）？</h3><p>在创建一个内部类的实例时，这个实例会持它外部类的引用，这使得在内部类里可以直接使用外部类的成员变量和方法。但是很多时候我们并不需要它，而持有的引用会导致外部类不能被GC回收，容易产生内存泄漏。如果加上static将他变成静态内部类时，在编译的时候内部类会被编译成一个独立常规的类，静态内部类的实例不会持有外部类的引用，这样就相当于就是一个普通的类，只是源码写在另一个类里而已。</p>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/03/17/关于iptables的配置问题/" itemprop="url">
-                  关于iptables配置的问题
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-17T11:01:10+08:00" content="2016-03-17">
-              2016-03-17
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/03/17/关于iptables的配置问题/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/03/17/关于iptables的配置问题/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>我们一般通过给iptables配置一些rule以提升服务器的安全性。常见做法就是在入口上只打开需要的端口如80、443、22等等，命令如下：</p>
-<p><code>sudo iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT</code></p>
-<p>然后默认drop非法数据包：</p>
-<p><code>sudo iptables -P INPUT DROP</code></p>
-<p>但是一般服务器都需要联网功能，比如下载、更新文件（apt-get、git），转发数据（shadowsocks），这个时候服务器主动建立连接请求数据时返回的数据包会被drop。举例说明：</p>
-<p>前提：</p>
-<p>通过shadowsocks访问Google，服务器iptables打开了8888端口给shadowsocks</p>
-<p>流程：</p>
-<p>客户端与vps 8888端口建立连接并发送访问www.google.com的请求 - 成功</p>
-<p>vps请求与Google服务器建立连接 - 失败</p>
-<p>分析：</p>
-<p>shadowsocks接收到数据后会通过其他端口（如52333）与Google服务器建立连接，而这个端口（52333）并没有在iptables中配置 input accept，这就导致在vps与Google服务器建立连接开始的三次握手中Google服务器响应的ACK数据包会被iptables drop，导致连接建立失败，使得shadowsocks无法正常工作</p>
-<p>解决方法：</p>
-<p>我们需要让vps主动发起的连接请求所返回的响应通过iptables，命令如下：</p>
-<p><code>sudo iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT</code></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/03/14/出栈序列问题/" itemprop="url">
-                  出栈序列问题
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-03-14T14:00:19+08:00" content="2015-03-14">
-              2015-03-14
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/03/14/出栈序列问题/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/03/14/出栈序列问题/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>出栈序列问题可以按照下面的方法来判断的:</p>
-<p>对于出栈序列中的每一个数字，在它后面的、比它小的所有数字，一定是按递减顺序排列的。</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
@@ -777,6 +367,17 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -796,8 +397,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.jpg"
@@ -877,6 +487,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#泛型集合违反直觉的行为"><span class="nav-number">1.</span> <span class="nav-text">泛型集合违反直觉的行为</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#泛型通配符"><span class="nav-number">2.</span> <span class="nav-text">泛型通配符</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -973,6 +594,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
@@ -989,9 +614,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'garywzh';
-      var disqus_identifier = 'index.html';
-      var disqus_title = '';
-      var disqus_url = '';
+      var disqus_identifier = '2016/06/10/Java的集合与泛型/';
+      var disqus_title = 'Java的集合与泛型';
+      var disqus_url = 'http://garywzh.xyz/2016/06/10/Java的集合与泛型/';
 
       function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');
@@ -1002,6 +627,8 @@
       }
 
       run_disqus_script('count.js');
+      
+        run_disqus_script('embed.js');
       
     </script>
   
