@@ -3,6 +3,16 @@ title: daily-focus
 date: 2016-02-14 16:46:57
 ---
 
+2016/11/27 [Activity lauchMode](http://wangkuiwu.github.io/2014/06/26/LaunchMode/)
+2016/11/26 [An example showing how to create and use a Drawable that animates](https://gist.github.com/scottdweber/5218446)
+2016/11/25 [Activity 回调顺序](http://blog.csdn.net/jiangwei0910410003/article/details/16968881)
+2016/11/21 [Are https URLs encrypted?](http://stackoverflow.com/a/38727920/5435312)
+2016/11/19 [解决 vmware Linux guest 中不显示 shared folder 的问题](https://github.com/rasa/vmware-tools-patches)
+2016/11/18 [linux shell 中"2>&1"含义](http://www.cnblogs.com/caolisong/archive/2007/04/25/726896.html)
+2016/11/17 [Java nio 多路复用](http://zhihu.com/question/23084473/answer/25133963)
+2016/11/09 [default value should always be last in selector list](https://developer.android.com/guide/topics/resources/color-list-resource.html)
+2016/10/17 [水塘抽样](https://zh.wikipedia.org/wiki/%E6%B0%B4%E5%A1%98%E6%8A%BD%E6%A8%A3)
+2016/10/07 [kcptun](https://github.com/xtaci/kcptun)
 2016/8/31 [A blank final instance variable must be definitely assigned at the end of every constructor of the class](http://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.3.1.2)
 2016/8/16 [What happens during installation of an APK?](https://www.quora.com/What-happens-during-installation-of-an-APK)
 2016/8/14 [SparseArray](https://youtu.be/I16lz26WyzQ)
