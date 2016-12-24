@@ -26,31 +26,3 @@ Java规定 如果声明了 `animals` 是一个 `List<Animal>`, 那么一定允�
 
 所以Java规定了 一个 `List<Dog>` 不是一个 `List<Animal>`
 
-### 泛型通配符
-
-那么如果我们想把一个 `List<Dog>` 转换成一个 `List<Animal>` 要怎么做呢？我们可以定义一个方法
-
-```java
-public static void copy(List<Animal> animals, List<Dog> dogs) {
-	for (Dog dog : dogs) {
-		animals.add(dog);
-	}
-}
-```
-
-将原list中的对象逐个添加到新list中,这种对集合操作的方法我们可以把它抽象出来 对象类型之间的继承关系可以用泛型中的通配符来表示
-
-`public static <T> void copy(List<T> dest, List<? extends T> src)`
-
-或者
-
-`public static <T> void copy(List<? super T> dest, List<T> src)`
-
-或者
-
-`public static <T> void copy(List<? super T> dest, List<? extends T> src)`
-
-泛型中使用通配符有 [get-put principle](http://stackoverflow.com/a/1292147/5435312), 也就是如果使用了`<? extends T>`只能get不能put(可以put null),如果使用了`<? super T>`只能put不能get(只能get到 Object)
-
-java.util.Collections中的`copy`使用的就是最后一种写法,更符合 [PECS](http://stackoverflow.com/a/2723538/5435312), 这在某种意义上限制了部分操作，减小了代码出错的几率
-
