@@ -98,7 +98,7 @@ Animal animal = new Dog();
 在Java集合中类似的这样写就会提示错误
 List&amp;lt;Animal&amp;gt; list = new ArrayList&amp;lt;Dog&amp;gt;();
 A dog is a animal, but a list of do">
-<meta property="og:updated_time" content="2016-06-29T03:56:16.598Z">
+<meta property="og:updated_time" content="2016-12-24T01:34:46.733Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java的集合与泛型">
 <meta name="twitter:description" content="假设 class Dog extends Animal
@@ -303,16 +303,6 @@ A dog is a animal, but a list of do">
 <p>Java规定 如果声明了 <code>animals</code> 是一个 <code>List&lt;Animal&gt;</code>, 那么一定允许执行 <code>animals.add(new Animal());</code></p>
 <p>但是我们知道 如果声明了 <code>dogs</code> 是一个 <code>List&lt;Dog&gt;</code>, 那么 <code>dogs.add(new Animal());</code> 是一定会报错的</p>
 <p>所以Java规定了 一个 <code>List&lt;Dog&gt;</code> 不是一个 <code>List&lt;Animal&gt;</code></p>
-<h3 id="泛型通配符"><a href="#泛型通配符" class="headerlink" title="泛型通配符"></a>泛型通配符</h3><p>那么如果我们想把一个 <code>List&lt;Dog&gt;</code> 转换成一个 <code>List&lt;Animal&gt;</code> 要怎么做呢？我们可以定义一个方法</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">copy</span><span class="params">(List&lt;Animal&gt; animals, List&lt;Dog&gt; dogs)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (Dog dog : dogs) &#123;</span><br><span class="line">		animals.add(dog);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>将原list中的对象逐个添加到新list中,这种对集合操作的方法我们可以把它抽象出来 对象类型之间的继承关系可以用泛型中的通配符来表示</p>
-<p><code>public static &lt;T&gt; void copy(List&lt;T&gt; dest, List&lt;? extends T&gt; src)</code></p>
-<p>或者</p>
-<p><code>public static &lt;T&gt; void copy(List&lt;? super T&gt; dest, List&lt;T&gt; src)</code></p>
-<p>或者</p>
-<p><code>public static &lt;T&gt; void copy(List&lt;? super T&gt; dest, List&lt;? extends T&gt; src)</code></p>
-<p>泛型中使用通配符有 <a href="http://stackoverflow.com/a/1292147/5435312" target="_blank" rel="external">get-put principle</a>, 也就是如果使用了<code>&lt;? extends T&gt;</code>只能get不能put(可以put null),如果使用了<code>&lt;? super T&gt;</code>只能put不能get(只能get到 Object)</p>
-<p>java.util.Collections中的<code>copy</code>使用的就是最后一种写法,更符合 <a href="http://stackoverflow.com/a/2723538/5435312" target="_blank" rel="external">PECS</a>, 这在某种意义上限制了部分操作，减小了代码出错的几率</p>
 
       
     </div>
@@ -511,7 +501,7 @@ A dog is a animal, but a list of do">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#泛型集合违反直觉的行为"><span class="nav-number">1.</span> <span class="nav-text">泛型集合违反直觉的行为</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#泛型通配符"><span class="nav-number">2.</span> <span class="nav-text">泛型通配符</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#泛型集合违反直觉的行为"><span class="nav-number">1.</span> <span class="nav-text">泛型集合违反直觉的行为</span></a></li></ol></div>
             
           </div>
         </section>
