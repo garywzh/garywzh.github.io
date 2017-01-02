@@ -3,6 +3,12 @@ title: daily-focus
 date: 2016-02-14 16:46:57
 ---
 
+2016/12/30 [Dexter](https://github.com/Karumi/Dexter)
+2016/12/26 [Custom ItemAnimator Demo](https://github.com/google/android-ui-toolkit-demos/blob/master/RecyclerView/RecyclerViewAnimations/app/src/main/java/examples/android/com/recyclerviewanimations/MainActivity.java)
+2016/12/25 [AutoValue](https://youtu.be/FfBBTHkRC-o)
+2016/12/24 [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)
+2016/12/23 [Just Say mNo to Hungarian Notation](http://jakewharton.com/just-say-no-to-hungarian-notation/)
+2016/12/13 [dm-verity](https://source.android.com/security/verifiedboot/)
 2016/11/27 [Activity lauchMode](http://wangkuiwu.github.io/2014/06/26/LaunchMode/)
 2016/11/26 [An example showing how to create and use a Drawable that animates](https://gist.github.com/scottdweber/5218446)
 2016/11/25 [Activity 回调顺序](http://blog.csdn.net/jiangwei0910410003/article/details/16968881)

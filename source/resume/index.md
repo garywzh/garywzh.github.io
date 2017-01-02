@@ -13,7 +13,7 @@ date: 2016-05-14 16:36:35
  * 王昭辉/男/1992 
  * 本科/北京科技大学 电子信息工程 
  * 英语：CET-6
- * 博客：http://garywzh.xyz
+ * 博客：http://garywzh.com
  * GitHub：http://github.com/garywzh
  * 期望职位：Android开发工程师
  * 期望城市：北京
