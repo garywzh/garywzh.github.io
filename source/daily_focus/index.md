@@ -3,6 +3,15 @@ title: daily-focus
 date: 2016-02-14 16:46:57
 ---
 
+2017/2/05 [Creating custom Text Selection actions with ACTION_PROCESS_TEXT](https://medium.com/google-developers/custom-text-selection-actions-with-action-process-text-191f792d2999#.vhv5ij8qt)
+2017/2/09 [Android Scroller](http://blog.csdn.net/guolin_blog/article/details/48719871)
+2017/2/05 [What's the point of setArguments?](http://stackoverflow.com/a/28061999/5435312)
+2017/1/21 [逆波兰表示法](https://zh.wikipedia.org/wiki/%E9%80%86%E6%B3%A2%E5%85%B0%E8%A1%A8%E7%A4%BA%E6%B3%95)
+2017/1/20 [调度场算法](https://zh.wikipedia.org/wiki/%E8%B0%83%E5%BA%A6%E5%9C%BA%E7%AE%97%E6%B3%95)
+2017/1/17 [What happens with closures running as goroutines?](https://golang.org/doc/faq#closures_and_goroutines)
+2017/1/15 [In Go HTTP handlers, why is the ResponseWriter a value but the Request a pointer?](http://stackoverflow.com/a/13255928/5435312)
+2017/1/14 [Is Go An Object Oriented Language?](http://spf13.com/post/is-go-object-oriented/)
+2017/1/06 [Android Outline](https://zhuanlan.zhihu.com/p/20689459)
 2016/12/30 [Dexter](https://github.com/Karumi/Dexter)
 2016/12/26 [Custom ItemAnimator Demo](https://github.com/google/android-ui-toolkit-demos/blob/master/RecyclerView/RecyclerViewAnimations/app/src/main/java/examples/android/com/recyclerviewanimations/MainActivity.java)
 2016/12/25 [AutoValue](https://youtu.be/FfBBTHkRC-o)
